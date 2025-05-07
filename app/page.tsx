@@ -3,21 +3,23 @@ import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import StarBackground from "@/components/StarBackground";
+import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
     <div className="relative">
       <StarBackground />
-      <div className="container z-20 mx-auto px-4 *:ml-5">
-        <section
-          id="home"
-          className="flex min-h-[70vh] max-w-2xl items-center"
-        >
+      <div className="container mx-auto px-4">
+        <section id="home" className="flex min-h-[60vh] items-center">
           <Hero />
         </section>
 
-        <section id="about" className="w-full py-20">
+        <section id="about" className="py-20">
           <About />
+        </section>
+
+        <section id="skills" className="py-20">
+          <Skills />
         </section>
 
         <section id="projects" className="py-20">

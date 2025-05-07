@@ -1,12 +1,12 @@
-import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
 import StarBackground from "@/components/StarBackground";
 
-export default function ProjectsPage() {
+export default function SkillsPage() {
   return (
     <div className="relative min-h-screen">
       <StarBackground />
       <div className="container mx-auto px-4 py-20">
-        <Projects />
+        <Skills />
       </div>
     </div>
   );

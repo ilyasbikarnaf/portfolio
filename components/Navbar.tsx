@@ -5,11 +5,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { ModeToggle } from "./ModeToggle";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const navLinks = [
   { href: "/#home", label: "Home" },
   { href: "/#about", label: "About" },
+  { href: "/#skills", label: "Skills" },
   { href: "/#projects", label: "Projects" },
   { href: "/#contact", label: "Contact" },
 ];
@@ -35,13 +36,13 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 shadow-md ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-md shadow-black/10"
-          : "bg-transparent shadow-transparent"
+          ? "bg-background/80 backdrop-blur-md shadow-md"
+          : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="text-xl font-bold">
             IlyasBikarnaf
@@ -79,14 +80,14 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Navigation Menu with AnimatePresence */}
+      {/* Mobile Navigation Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
             key="mobile-menu"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, height: 0, y: -20 }}
+            animate={{ opacity: 1, height: "auto", y: 0 }}
+            exit={{ opacity: 0, height: 0, y: -20 }}
             transition={{ duration: 0.3 }}
             className="overflow-hidden bg-background/95 backdrop-blur-md md:hidden"
           >

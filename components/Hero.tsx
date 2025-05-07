@@ -57,11 +57,7 @@ export default function Hero() {
           </Button>
 
           <Button variant="outline" asChild>
-            <a
-              href="https://drive.google.com/file/d/1FjgbOUnE7MUywbuCg49H3Gw7aQSo7jT-/view?usp=drive_link"
-              target="_blank"
-              download
-            >
+            <a href="/resume.pdf" target="_blank" download>
               Download Resume <Download className="ml-2 h-4 w-4" />
             </a>
           </Button>

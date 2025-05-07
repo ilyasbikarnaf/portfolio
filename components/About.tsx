@@ -6,7 +6,6 @@ import { useRef } from "react";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import ProfilePhoto from "@/public/profilePhoto.jpg";
-import { backendSkills, frontendSkills, otherSkills } from "@/lib/skills";
 
 const skills = [
   "HTML",
@@ -89,80 +88,6 @@ export default function About() {
               professionally, as I continue to build my career in web
               development.
             </p>
-          </div>
-
-          <div className="mt-8">
-            <h4 className="mb-4 text-xl font-semibold">My Skills</h4>
-            <div className="space-y-6">
-              {/* Frontend Skills */}
-              <div>
-                <h5 className="text-lg font-medium text-gray-700">
-                  Frontend Development
-                </h5>
-                <div className="flex flex-wrap gap-3">
-                  {frontendSkills.map((skill, index) => (
-                    <motion.div
-                      key={skill}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={
-                        isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-                      }
-                      transition={{ duration: 0.3, delay: 0.5 + index * 0.05 }}
-                    >
-                      <Badge variant="secondary" className="px-4 py-2 text-sm">
-                        {skill}
-                      </Badge>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Backend Skills */}
-              <div>
-                <h5 className="text-lg font-medium text-gray-700">
-                  Backend Development
-                </h5>
-                <div className="flex flex-wrap gap-3">
-                  {backendSkills.map((skill, index) => (
-                    <motion.div
-                      key={skill}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={
-                        isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-                      }
-                      transition={{ duration: 0.3, delay: 0.5 + index * 0.05 }}
-                    >
-                      <Badge variant="secondary" className="px-4 py-2 text-sm">
-                        {skill}
-                      </Badge>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Other Skills */}
-              <div>
-                <h5 className="text-lg font-medium text-gray-700">
-                  Other Skills
-                </h5>
-                <div className="flex flex-wrap gap-3">
-                  {otherSkills.map((skill, index) => (
-                    <motion.div
-                      key={skill}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={
-                        isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-                      }
-                      transition={{ duration: 0.3, delay: 0.5 + index * 0.05 }}
-                    >
-                      <Badge variant="secondary" className="px-4 py-2 text-sm">
-                        {skill}
-                      </Badge>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </div>
           </div>
         </motion.div>
       </div>
