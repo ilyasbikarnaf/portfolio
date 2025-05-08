@@ -60,10 +60,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 
           <Button
             size="sm"
-            className={cn(
-              project.title === "GrindFlow" &&
-                "opacity-30 hover:cursor-not-allowed "
-            )}
+            className={cn(project.title === "GrindFlow" && "invisible ")}
             asChild
           >
             <a
