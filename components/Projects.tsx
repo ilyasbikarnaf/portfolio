@@ -7,7 +7,7 @@ import ProjectCard from "./ProjectCard";
 import clariCash from "@/public/clariCash.png";
 import worldRanks from "@/public/worldRanks.png";
 import focusFlow from "@/public/focusFlow.png";
-import PhotographerPortFolio from "@/public/PhotographerPortFolio.png";
+import DiscordImage from "@/public/discord.png";
 
 export type Project = {
   id: number;
@@ -85,13 +85,13 @@ const projects: Project[] = [
   },
   {
     id: 4,
-    title: "Photographer's portfolio",
+    title: "GrindFlow",
     description:
-      "A minimalist portfolio showcasing a photographer's work with a clean, responsive design for easy browsing and contact",
-    image: PhotographerPortFolio,
-    tags: ["Html5", "Tailwind CSS"],
-    github: "https://github.com/ilyasbikarnaf/Photographer_PortFolio",
-    demo: "https://portoliodemo.vercel.app/",
+      "A flexible Discord bot that automatically sends scheduled daily messages to your chosen channel. Perfect for daily coding challenges, quotes, reminders, journaling prompts, or team standups. Fully customizable and easy to set up for any daily automation task.",
+    image: DiscordImage,
+    tags: ["TypeScript", "Node.js", "Discord.js", "Cron", "nodemon"],
+    github: "https://github.com/ilyasbikarnaf/grindflow",
+    // demo: "https://portoliodemo.vercel.app/",
   },
 ];
 

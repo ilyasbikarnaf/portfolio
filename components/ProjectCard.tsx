@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import type { Project } from "./Projects";
+import { cn } from "@/lib/utils";
 
 export default function ProjectCard({ project }: { project: Project }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -57,7 +58,14 @@ export default function ProjectCard({ project }: { project: Project }) {
             </a>
           </Button>
 
-          <Button size="sm" asChild>
+          <Button
+            size="sm"
+            className={cn(
+              project.title === "GrindFlow" &&
+                "opacity-30 hover:cursor-not-allowed "
+            )}
+            asChild
+          >
             <a
               href={project.demo}
               target="_blank"
