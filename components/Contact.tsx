@@ -40,6 +40,7 @@ export default function Contact() {
         }
 
         toast.success("Message Sent successfully");
+        setFormData({ name: "", email: "", message: "" });
       } catch (err) {
         console.log(err);
         console.log("error");
@@ -57,12 +58,6 @@ export default function Contact() {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
-
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   // For now, just use mailto
-  //   window.location.href = `mailto:ilyas.bikarnaf@gmail.com?subject=Contact from ${formData.name}&body=${formData.message}`;
-  // };
 
   return (
     <div ref={ref} className="w-full">
