@@ -19,7 +19,7 @@ export async function sendContactEmail(data: {
 
     await transporter.sendMail({
       from: email, // ✅ sender address
-      to: "ilyas.bikarnaf@gmail.com", // ✅ list of receivers (comma-separated string or array)
+      to: "contact@ilyasbikarnaf.com", // ✅ list of receivers (comma-separated string or array)
       replyTo: email,
       subject: `Form message from ${name}`, // ✅ Subject line
       text: message, // ✅ Plain text body
